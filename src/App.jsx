@@ -58,7 +58,7 @@ const App = () => {
       </select>
       <br></br>
       <select value={select1} onChange={({ target }) => setSelect1(target.value)} id="produtos" >
-        <option disabled value="">
+        <option disabled value="">s
           Selecione
         </option>
         <option value="bom">Bom</option>
