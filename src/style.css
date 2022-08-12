@@ -1,13 +1,31 @@
 body {
   background-color: #eee;
-  font-family: segoe ui;
+  font-family: inter, segoe ui;
   font-weight: bold;
+  width: 920px;
+}
+
+input {
+  background-color: #333;
+  border: none;
+  color: orange;
+  padding: 5px;
+  border-radius: 3px;
+  width: 100px;
+  text-align: center;
+}
+
+p {
+  margin: 3px 0;
 }
 
 select {
   margin-top: 5px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 3px;
+  background-color: #333;
+  border: none;
+  color: orange
 }
 
 button {
@@ -23,17 +41,12 @@ button:hover {
   background-color: grey;
 }
 
-.reset {
-  background-color: blueviolet;
-}
-
-#comandos {
+.bridge-uplink {
   margin-top: 20px;
   background-color: #333;
   color: white;
   padding: 20px;
-  font-family: monospace;
-  font-size: 14px;
+  font-size: 8px;
   box-shadow: 0 0 0.5em #000;
 }
 
