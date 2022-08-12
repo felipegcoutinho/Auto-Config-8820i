@@ -1,0 +1,42 @@
+body {
+  background-color: #eee;
+  font-family: segoe ui;
+  font-weight: bold;
+}
+
+select {
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+button {
+  background-color: orange;
+  padding: 10px 30px 10px 30px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  background-color: grey;
+}
+
+.reset {
+  background-color: blueviolet;
+}
+
+#comandos {
+  margin-top: 20px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 14px;
+  box-shadow: 0 0 0.5em #000;
+}
+
+span {
+  color: tomato;
+}
