@@ -15,6 +15,10 @@ input {
   text-align: center;
 }
 
+.selectcomando {
+  padding: 0;
+}
+
 p {
   margin: 3px 0;
 }
