@@ -16,6 +16,11 @@ body {
   font-family: inter, segoe ui;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -111,7 +116,7 @@ h2>p:before {
   width: 920px;
 }
 
-.bridge-uplink {
+.configure-commands {
   margin-top: 20px;
   background-color: black;
   color: white;
@@ -121,11 +126,15 @@ h2>p:before {
   box-shadow: 0 0 0.5em #000;
 }
 
+.configure-commands>p {
+  font-size: 1.0rem;
+}
+
 
 .pon-container {
   display: flex;
   margin: 10px 0;
-  padding: 10px;
+  padding: 10px 0;
   text-transform: uppercase;
   font-size: 12px;
   justify-content: center;
@@ -144,4 +153,45 @@ h2>p:before {
 
 .pon-config>label {
   font-weight: bold;
+}
+
+.cpe-profiles-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cpe-profiles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 3px;
+  background-color: #dfdfdf;
+  padding: 5px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #00a335 30%, #ddd 0%);
+}
+
+.cpe-profiles>select {
+  width: 150px;
+}
+
+.container-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.configure {
+  background-color: var(--main-color);
+  padding: 10px;
+  width: calc(920px/2);
+}
+
+.remove-configure {
+  background-color: red;
+  padding: 10px;
+  width: calc(920px/2);
 }
