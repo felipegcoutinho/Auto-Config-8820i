@@ -409,16 +409,54 @@ export default function App() {
         </div>
       </div>
 
+
       <div className='container-tabs'>
         <a onClick={Hide}><div className='configure'>Configurar</div></a>
         <a onClick={Show}><div className='remove-configure'>Remover</div></a>
       </div>
 
-
       {showElement ?
-        <div className="configure-commands">teste</div> :
+        <div className="configure-commands">
+          <p>bridge-profile delete gpon1-default</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon2-default-router</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon3-default-router</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon4-default</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon5-default</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon6-default</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon7-default</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon8-default</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon1-default-router</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon2-default-router</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon3-default-router</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon4-default-router</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon5-default-router</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon6-default-router</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon7-default-router</p>
+          <p>yes</p>
+          <p>bridge-profile delete gpon8-default-router</p>
+          <p>yes</p>
+          <p>auto-service disable</p>
+          <p>yes</p>
+          <p>onu set noauto</p>
+          <p>yes</p>
+        </div> :
 
         <div className="configure-commands">
+          <div><button>Copiar</button></div>
           <p>bridge add <span>{values.uplinkpon1}</span> <span>{values.bridgepon1}</span> vlan <span>{values.vlanpon1}</span> <span>{values.modovlanpon1}</span></p>
           <p>bridge add <span>{values.uplinkpon2}</span> <span>{values.bridgepon2}</span> vlan <span>{values.vlanpon2}</span> <span>{values.modovlanpon2}</span></p>
           <p>bridge add <span>{values.uplinkpon3}</span> <span>{values.bridgepon3}</span> vlan <span>{values.vlanpon3}</span> <span>{values.modovlanpon3}</span></p>
