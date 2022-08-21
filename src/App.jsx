@@ -573,30 +573,52 @@ export default function App() {
         </div>
       </div>
 
-      <div className="commands">
-        <div>
-          <p>bridge add <span>{values.uplinkpon1}</span> <span>{values.bridgepon1}</span> vlan <span>{values.vlanpon1}</span> <span>{values.modovlanpon1}</span></p>          <p>bridge-profile add default downlink vlan 100 tagged eth 1</p>
-          <p>bridge-profile add default-router <span>{bridgeAjustepon1()}</span> vlan 101 tagged router</p>
-          <p>bridge-profile bind add <span>{gimode()}</span> device intelbras-110</p>
-          <p>bridge-profile bind add default device intelbras-110b</p>
-          <p>bridge-profile bind add default device intelbras-110g</p>
-          <p>bridge-profile bind add <span>{defaultmode()}</span> device intelbras-default</p>
-          <p>bridge-profile bind add <span>{r1mode()}</span> device intelbras-r1</p>
-          <p>bridge-profile bind add default-router device intelbras-121w</p>
-          <p>bridge-profile bind add default-router device intelbras-142ng</p>
-          <p>bridge-profile bind add default-router device intelbras-142nw</p>
-          <p>bridge-profile bind add default-router device intelbras-1420g</p>
-          <p>bridge-profile bind add default-router device intelbras-120ac</p>
-          <p>bridge-profile bind add default-router device intelbras-121ac</p>
-          <p>bridge-profile bind add default-router device intelbras-1200r</p>
-          <p>onu set auto</p>
-          <p>auto-service enable</p>
-          <p>yes</p>
-          <p>onu show refresh</p>
-        </div>
-        <div className='copybutton'><button ><i class="fa-solid fa-2x fa-copy"></i></button></div>
+      <div className='tabs-container'>
+        <a onClick={Hide}><div className='config-auto-service'>Configurações do Auto-Service</div></a>
+        <a onClick={Show}><div className='remove-auto-service'>Remover Configuração</div></a>
       </div>
 
+      {
+        showElement ?
+
+          <div className="commands">
+            <div>
+              <p>bridge-profile delete default</p>
+              <p> yes</p>
+              <p>bridge-profile delete default-router</p>
+              <p>yes</p>
+              <p>auto-service disable</p>
+              <p>yes</p>
+              <p>onu set noauto</p>
+              <p>yes</p>
+            </div>
+            <div className='copybutton'><button ><i class="fa-solid fa-2x fa-copy"></i></button></div>
+          </div>
+          :
+          <div className="commands">
+            <div>
+              <p>bridge add <span>{values.uplinkpon1}</span> <span>{values.bridgepon1}</span> vlan <span>{values.vlanpon1}</span> <span>{values.modovlanpon1}</span></p>          <p>bridge-profile add default downlink vlan 100 tagged eth 1</p>
+              <p>bridge-profile add default-router <span>{bridgeAjustepon1()}</span> vlan 101 tagged router</p>
+              <p>bridge-profile bind add <span>{gimode()}</span> device intelbras-110</p>
+              <p>bridge-profile bind add default device intelbras-110b</p>
+              <p>bridge-profile bind add default device intelbras-110g</p>
+              <p>bridge-profile bind add <span>{defaultmode()}</span> device intelbras-default</p>
+              <p>bridge-profile bind add <span>{r1mode()}</span> device intelbras-r1</p>
+              <p>bridge-profile bind add default-router device intelbras-121w</p>
+              <p>bridge-profile bind add default-router device intelbras-142ng</p>
+              <p>bridge-profile bind add default-router device intelbras-142nw</p>
+              <p>bridge-profile bind add default-router device intelbras-1420g</p>
+              <p>bridge-profile bind add default-router device intelbras-120ac</p>
+              <p>bridge-profile bind add default-router device intelbras-121ac</p>
+              <p>bridge-profile bind add default-router device intelbras-1200r</p>
+              <p>onu set auto</p>
+              <p>auto-service enable</p>
+              <p>yes</p>
+              <p>onu show refresh</p>
+            </div>
+            <div className='copybutton'><button ><i class="fa-solid fa-2x fa-copy"></i></button></div>
+          </div>
+      }
     </section >
   );
 };

@@ -2,6 +2,7 @@
 
 :root {
   --main-color: #00A335;
+  --secondary-color: #5E6573;
 }
 
 * {
@@ -184,14 +185,23 @@ h5 {
 }
 
 .config-auto-service {
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
   padding: 10px;
   width: calc(920px/2);
   border-radius: 5px 0 0 5px;
 }
 
-.remove-auto-service {
+.config-auto-service:active {
+  background-color: var(--main-color);
+}
+
+.remove-auto-service:active {
   background-color: red;
+}
+
+.remove-auto-service {
+  background-color: var(--secondary-color);
+  margin-left: 2px;
   padding: 10px;
   width: calc(920px/2);
   border-radius: 0 5px 5px 0;
