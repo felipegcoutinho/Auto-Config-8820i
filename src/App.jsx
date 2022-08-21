@@ -526,7 +526,7 @@ export default function App() {
         <div className='cpe-modes'>
           <h5>TODAS AS PONS</h5>
           <label>Vlan ID</label>
-          <input type="number" value={values.vlanpon1} onChange={handleChange} name="vlanpon1" />
+          <input type="number" value={values.vlanpon1} onChange={handleChange} name="vlanpon1" min="1" max="4095" />
           <label>Uplink</label>
           <select value={values.uplinkpon1} onChange={handleChange} name="uplinkpon1">
             {options.map((option) => (
