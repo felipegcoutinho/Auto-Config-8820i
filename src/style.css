@@ -1,3 +1,5 @@
+/* STRUCTURE SETTINGS */
+
 :root {
   --main-color: #00A335;
 }
@@ -12,7 +14,7 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: whitesmoke;
   font-family: inter, segoe ui;
 }
 
@@ -21,7 +23,8 @@ a {
   color: white;
 }
 
-input::-webkit-outer-spin-button,
+/* Remover setas do input */
+::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -32,7 +35,7 @@ select {
   border-radius: 3px;
   width: 100%;
   text-align: center;
-  padding: 3px 0;
+  padding: 4px 0;
   font-size: 1rem;
   background-color: #e6e6e6;
   margin-bottom: 5px;
@@ -48,16 +51,6 @@ select:focus-visible {
 
 span {
   color: orange;
-}
-
-h5 {
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-h2>p:before {
-  content: '# ';
-  color: aqua;
 }
 
 /* HEADER SETTINGS */
@@ -106,38 +99,26 @@ h2>p:before {
 
 /* MAIN SETTINGS */
 
+h5 {
+  margin-bottom: 10px;
+  color: white;
+}
+
 #main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.main {
+.main-container {
   width: 920px;
 }
-
-.configure-commands {
-  margin-top: 20px;
-  background-color: black;
-  color: white;
-  padding: 20px;
-  font-size: 10px;
-  font-family: monospace;
-  box-shadow: 0 0 0.5em #000;
-}
-
-.configure-commands,
-.remove-configure>p {
-  font-size: 0.8rem;
-}
-
 
 .pon-container {
   display: flex;
   margin: 10px 0;
-  padding: 10px 0;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.8rem;
   justify-content: center;
 }
 
@@ -146,53 +127,107 @@ h2>p:before {
   flex-direction: column;
   align-items: center;
   margin: 3px;
-  background-color: #dfdfdf;
   padding: 5px;
   border-radius: 5px;
-  background: linear-gradient(to bottom, #00a335 11%, #ddd 0%);
+  background: linear-gradient(to bottom, #00a335 10%, #dfdfdf 0%);
 }
 
 .pon-config>label {
   font-weight: bold;
 }
 
-.cpe-profiles-container {
-  display: flex;
-  justify-content: center;
+.testando {
+  width: 100%;
 }
 
-.cpe-profiles {
+.cpe-container,
+.cpe-container-uma-vlan {
+  display: flex;
+  font-size: 0.8rem;
+}
+
+.cpe-modes {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   margin: 3px;
-  background-color: #dfdfdf;
   padding: 5px;
   border-radius: 5px;
-  background: linear-gradient(to bottom, #00a335 30%, #ddd 0%);
+  background: linear-gradient(to bottom, #00a335 30%, #dfdfdf 0%);
 }
 
-.cpe-profiles>select {
-  width: 150px;
+.cpe-container-uma-vlan>.cpe-modes {
+  background: linear-gradient(to bottom, #00a335 10%, #dfdfdf 0%);
+
 }
 
-.container-tabs {
+.cpe-modes>select,
+.cpe-modes>input {
+  width: 180px;
+}
+
+.cpe-modes>label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.tabs-container {
   display: flex;
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
   color: white;
   cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
 
-.configure {
+.config-auto-service {
   background-color: var(--main-color);
   padding: 10px;
   width: calc(920px/2);
+  border-radius: 5px 0 0 5px;
 }
 
-.remove-configure {
+.remove-auto-service {
   background-color: red;
   padding: 10px;
   width: calc(920px/2);
+  border-radius: 0 5px 5px 0;
+}
+
+.commands {
+  margin: 20px 0;
+  background-color: rgb(28, 28, 28);
+  color: white;
+  padding: 20px;
+  font-size: 10px;
+  font-family: monospace;
+  box-shadow: 0 0 0.5em black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.commands,
+.remove-auto-service>p {
+  font-size: 0.9rem;
+}
+
+.commands>div p:before {
+  content: '# ';
+  color: aqua;
+}
+
+.copybutton {
+  height: 50px;
+  width: 75px;
+}
+
+.copybutton>button {
+  cursor: pointer;
+  height: 30px;
+  width: 40px;
+  background-color: transparent;
+  color: mediumspringgreen;
 }
