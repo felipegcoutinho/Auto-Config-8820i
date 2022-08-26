@@ -1,7 +1,6 @@
 import * as React from 'react';
 import './style.css';
 import options from './options';
-import Poncontainer from './pon-container';
 import Header from './header'
 import initialValues from './initialValues.js';
 
@@ -117,13 +116,13 @@ export default function App() {
   };
 
   function switchVisible() {
-    if (document.getElementsByClassName('porpon-container').style.display == 'none') {
-      document.getElementsByClassName('porpon-container').style.display = 'block';
-      document.getElementsByClassName('umavlan-container').style.display = 'none';
+    if (document.getElementById('porpon-container').style.display == 'none') {
+      document.getElementById('porpon-container').style.display = 'block';
+      document.getElementById('umavlan-container').style.display = 'none';
       console.log('teste');
     } else {
-      document.getElementsByClassName('porpon-container').style.display = 'none';
-      document.getElementsByClassName('umavlan-container').style.display = 'block';
+      document.getElementById('porpon-container').style.display = 'none';
+      document.getElementById('umavlan-container').style.display = 'block';
     }
   }
 
@@ -134,12 +133,12 @@ export default function App() {
 
       <Header />
 
-      <button id="Button1" type="button" value="" onClick={switchVisible}>
-        Alterar config da PON
-      </button>
+      <div className='button-container' onClick={switchVisible}>
+        Alterar modo de configuração da PON
+      </div>
 
 
-      <div className='porpon-container'>
+      <div id='porpon-container'>
 
 
 
@@ -559,7 +558,7 @@ export default function App() {
         }
       </div>
       {/* UMA VLAN */}
-      <div className='umavlan-container'>
+      <div id='umavlan-container'>
         <h1 id='umavlan'>APENAS UMA VLAN</h1>
         <div className='cpe-container-uma-vlan'>
           <div className='cpe-modes'>
@@ -631,7 +630,7 @@ export default function App() {
                 <p>onu set noauto</p>
                 <p>yes</p>
               </div>
-              <div className='copybutton'><button onClick={() => copyToClip(document.getElementById('foo3').innerHTML)}><i class="fa-solid fa-2x fa-copy"></i></button></div>
+              <div className='copybutton'><button onClick={() => copyToClip(document.getElementById('foo3').innerText)}><i class="fa-solid fa-2x fa-copy"></i></button></div>
             </div>
             :
             <div className="commands">
@@ -656,7 +655,7 @@ export default function App() {
                 <p>yes</p>
                 <p>onu show refresh</p>
               </div>
-              <div className='copybutton'><button onClick={() => copyToClip(document.getElementById('foo4').innerHTML)}><i class="fa-solid fa-2x fa-copy"></i></button></div>
+              <div className='copybutton'><button onClick={() => copyToClip(document.getElementById('foo4').innerText)}><i class="fa-solid fa-2x fa-copy"></i></button></div>
             </div>
         }
 
