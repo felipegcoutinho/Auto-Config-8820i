@@ -225,7 +225,7 @@ h5 {
 }
 
 .commands>div p:before {
-  content: '# ';
+  content: '';
   color: aqua;
 }
 
@@ -240,4 +240,13 @@ h5 {
   width: 40px;
   background-color: transparent;
   color: mediumspringgreen;
+}
+
+/* .umavlan-container {
+  display: none;
+} */
+
+
+#Button1 {
+  background-color: red;
 }
