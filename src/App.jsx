@@ -1,7 +1,6 @@
 import * as React from 'react';
 import './style.css';
 import options from './options';
-import Header from './header';
 import initialValues from './initialValues.js';
 
 export default function App() {
@@ -17,6 +16,8 @@ export default function App() {
       [name]: value,
     });
   };
+
+  const [buttonText, setButtonText] = React.useState('Copiar');
 
   function bridgeAjustepon1() {
     if (values.bridgepon1 == 'tls') {
@@ -110,19 +111,23 @@ export default function App() {
     document.addEventListener('copy', listener);
     document.execCommand('copy');
     document.removeEventListener('copy', listener);
-    // const btn = document.getElementById('testebtn');
-    // if (btn.innerText == 'Copiar') {
-    //   btn.innerText = 'Copiado';
-    // } else {
-    //   btn.innerText = 'Copiar';
+
+    setButtonText('Copiado')
+
+    setTimeout(() => {
+      setButtonText("Copiar");
+    }, 2000);
+    // const btn1 = document.getElementById('btn1');
+    // if (btn1.innerText == 'Copiado') {
+    // alert('teste');
     // }
-    alert('Copiado!');
   }
 
   function switchVisible() {
     if (document.getElementById('porpon-container').style.display == 'none') {
       document.getElementById('porpon-container').style.display = 'block';
       document.getElementById('umavlan-container').style.display = 'none';
+
     } else {
       document.getElementById('porpon-container').style.display = 'none';
       document.getElementById('umavlan-container').style.display = 'block';
@@ -132,11 +137,12 @@ export default function App() {
   return (
     <section className="main-container">
       <div className="button-container" onClick={switchVisible}>
-        <i class="fa-solid fa-rotate"></i> Alterar modo de configuração da OLT
+        <i className="fa-solid fa-rotate"></i> Alterar modo de configuração da OLT
       </div>
-
+      {/* UMA VLAN POR PON */}
       <div id="porpon-container">
-        <h1 id="porpon">UMA VLAN POR PON</h1>
+        <h1 id="porpon">UMA VLAN POR PORTA PON <button className='reset' onClick={() => setValues((initialValues))}>Limpar</button></h1>
+        <h3>Define identificação de vlan, porta uplink, tipo da vlan e a bridge para cada porta pon.</h3>
         <div className="pon-container">
           {/*********** PON-1 /**********/}
 
@@ -510,13 +516,15 @@ export default function App() {
             </div>
           </a>
           <a onClick={Show}>
-            <div className="remove-auto-service">Remover Configuração</div>
+            <div className="remove-auto-service">
+              Remover Configuração Padrão
+            </div>
           </a>
         </div>
 
         {showElement ? (
           <div className="commands">
-            <div id="foo">
+            <div id="config1">
               <p>bridge-profile delete gpon1-default</p>
               <p>yes</p>
               <p>bridge-profile delete gpon2-default-router</p>
@@ -554,27 +562,25 @@ export default function App() {
               <p>onu set noauto</p>
               <p>yes</p>
             </div>
-
             <div
-              id="testebtn"
               className="copybutton"
-              onClick={() =>
-                copyToClip(document.getElementById('foo').innerText)
-              }
-            >
-              Copy
+              onClick={() => copyToClip(document.getElementById('config1').innerText)}>
+              {buttonText}
             </div>
           </div>
         ) : (
           <div className="commands">
-            <div id="foo1">
-              bridge add <span>{values.uplinkpon1}</span>{' '}
-              <span>{values.bridgepon1}</span> vlan{' '}
-              <span>{values.vlanpon1}</span> <span>{values.modovlanpon1}</span>
-              <br></br>
-              bridge add <span>{values.uplinkpon2}</span>{' '}
-              <span>{values.bridgepon2}</span> vlan{' '}
-              <span>{values.vlanpon2}</span> <span>{values.modovlanpon2}</span>
+            <div id="config2">
+              <p>
+                bridge add <span>{values.uplinkpon1}</span>{' '}
+                <span>{values.bridgepon1}</span> vlan{' '}
+                <span>{values.vlanpon1}</span> <span>{values.modovlanpon1}</span>
+              </p>
+              <p>
+                bridge add <span>{values.uplinkpon2}</span>{' '}
+                <span>{values.bridgepon2}</span> vlan{' '}
+                <span>{values.vlanpon2}</span> <span>{values.modovlanpon2}</span>
+              </p>
               <p>
                 bridge add <span>{values.uplinkpon3}</span>{' '}
                 <span>{values.bridgepon3}</span> vlan{' '}
@@ -1074,18 +1080,17 @@ export default function App() {
             </div>
             <div
               className="copybutton"
-              onClick={() =>
-                copyToClip(document.getElementById('foo1').innerText)
-              }
-            >
-              Copy
+              onClick={() => copyToClip(document.getElementById('config2').innerText)}>
+              {buttonText}
             </div>
           </div>
         )}
       </div>
+
       {/* UMA VLAN */}
       <div id="umavlan-container">
-        <h1 id="umavlan">APENAS UMA VLAN</h1>
+        <h1 id="umavlan">APENAS UMA VLAN <button className='reset' onClick={() => setValues((initialValues))}>Limpar</button></h1>
+        <h3>Define identificação da vlan, porta uplink, tipo da vlan e a bridge para todas as portas pons.</h3>
         <div className="cpe-container-uma-vlan">
           <div className="cpe-modes">
             <h5>TODAS AS PONS</h5>
@@ -1095,8 +1100,6 @@ export default function App() {
               value={values.vlanpon1}
               onChange={handleChange}
               name="vlanpon1"
-              min="1"
-              max="4095"
             />
             <label>Uplink</label>
             <select
@@ -1129,7 +1132,7 @@ export default function App() {
             </select>
           </div>
 
-          <div className="testando">
+          <div className="cpe-modes-container">
             <div className="cpe-modes">
               <h5>ONU R1</h5>
               <label>Modo</label>
@@ -1143,7 +1146,7 @@ export default function App() {
               </select>
             </div>
             <div className="cpe-modes">
-              <h5 className="AAAA">ONU 110</h5>
+              <h5>ONU 110</h5>
               <label>Modo</label>
               <select
                 value={values.giMode}
@@ -1155,7 +1158,7 @@ export default function App() {
               </select>
             </div>
             <div className="cpe-modes">
-              <h5 className="AAAA">Default</h5>
+              <h5>Default</h5>
               <label>Modo</label>
               <select
                 value={values.defaultMode}
@@ -1176,13 +1179,13 @@ export default function App() {
             </div>
           </a>
           <a onClick={Show}>
-            <div className="remove-auto-service">Remover Configuração</div>
+            <div className="remove-auto-service">Remover Configuração Padrão</div>
           </a>
         </div>
 
         {showElement ? (
           <div className="commands">
-            <div id="foo3">
+            <div id="config3">
               <p>bridge-profile delete default</p>
               <p> yes</p>
               <p>bridge-profile delete default-router</p>
@@ -1195,15 +1198,13 @@ export default function App() {
             <div
               className="copybutton"
               onClick={() =>
-                copyToClip(document.getElementById('foo3').innerText)
-              }
-            >
-              Copy
+                copyToClip(document.getElementById('config3').innerText)}>
+              {buttonText}
             </div>
           </div>
         ) : (
           <div className="commands">
-            <div id="foo4">
+            <div id="config4">
               <p>
                 bridge add <span>{values.uplinkpon1}</span>{' '}
                 <span>{values.bridgepon1}</span> vlan{' '}
@@ -1262,14 +1263,12 @@ export default function App() {
             <div
               className="copybutton"
               onClick={() =>
-                copyToClip(document.getElementById('foo4').innerText)
-              }
-            >
-              Copy
+                copyToClip(document.getElementById('config4').innerText)}>
+              {buttonText}
             </div>
           </div>
         )}
       </div>
-    </section>
+    </section >
   );
 }

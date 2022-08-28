@@ -1,4 +1,5 @@
 /* STRUCTURE SETTINGS */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
 
 :root {
   --main-color: #00a335;
@@ -16,11 +17,11 @@
 
 body {
   background-color: whitesmoke;
-  font-family: segoe ui;
+  font-family: 'Fira Sans', segoe ui, arial;
   overflow: auto;
-  /* Hide scrollbars */
 }
 
+/* Hide scrollbars */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -43,21 +44,27 @@ select {
   width: 100%;
   text-align: center;
   padding: 4px 0;
-  font-size: 1rem;
   background-color: #e6e6e6;
   margin-bottom: 5px;
+  font-size: 0.9rem;
 }
 
-input:focus-visible {
-  background-color: white;
-}
-
+input:focus-visible,
 select:focus-visible {
   background-color: white;
 }
 
 span {
   text-decoration: underline;
+}
+
+h5 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+h3 {
+  font-weight: normal;
 }
 
 /* HEADER SETTINGS */
@@ -73,12 +80,7 @@ span {
 
 .logo {
   display: inline-block;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  padding-right: 10px;
+  font-weight: bold;
 }
 
 .navbar a {
@@ -87,29 +89,7 @@ span {
   padding-left: 10px;
 }
 
-.nav-item a {
-  display: inline-block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-
-.nav-item:hover {
-  background-color: white;
-}
-
-.nav-item:hover a {
-  color: green;
-}
-
 /* MAIN SETTINGS */
-
-h5 {
-  margin-bottom: 10px;
-  color: white;
-}
 
 #main {
   display: flex;
@@ -119,13 +99,13 @@ h5 {
 
 .main-container {
   width: 920px;
+  font-size: 0.9rem;
 }
 
 .pon-container {
   display: flex;
   margin: 10px 0;
   text-transform: uppercase;
-  font-size: 0.8rem;
   justify-content: center;
 }
 
@@ -136,6 +116,7 @@ h5 {
   margin: 3px;
   padding: 5px;
   border-radius: 5px;
+  border: 1px solid #d4d4d4;
   background: linear-gradient(to bottom, var(--main-color) 10%, #dfdfdf 0%);
 }
 
@@ -143,14 +124,13 @@ h5 {
   font-weight: bold;
 }
 
-.testando {
+.cpe-modes-container {
   width: 100%;
 }
 
 .cpe-container,
 .cpe-container-uma-vlan {
   display: flex;
-  font-size: 0.8rem;
   margin-top: 10px;
 }
 
@@ -162,6 +142,7 @@ h5 {
   margin: 3px;
   padding: 5px;
   border-radius: 5px;
+  border: 1px solid #d4d4d4;
   background: linear-gradient(to bottom, var(--main-color) 30%, #dfdfdf 0%);
 }
 
@@ -176,7 +157,6 @@ h5 {
 
 .cpe-modes>label {
   text-transform: uppercase;
-  font-size: 0.8rem;
   font-weight: bold;
 }
 
@@ -187,7 +167,6 @@ h5 {
   color: white;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 0.8rem;
 }
 
 .config-auto-service {
@@ -195,14 +174,12 @@ h5 {
   padding: 10px;
   width: calc(920px / 2);
   border-radius: 5px 0 0 5px;
+  border: 1px solid #4d525d;
 }
 
 .config-auto-service:active {
   background-color: var(--main-color);
-}
-
-.remove-auto-service:active {
-  background-color: red;
+  border: 1px solid var(--main-color);
 }
 
 .remove-auto-service {
@@ -211,40 +188,40 @@ h5 {
   padding: 10px;
   width: calc(920px / 2);
   border-radius: 0 5px 5px 0;
+  border: 1px solid #4d525d;
+}
+
+.remove-auto-service:active {
+  background-color: red;
+  border: 1px solid red;
 }
 
 .commands {
+  display: flex;
   margin: 20px 0;
-  background-color: rgb(28, 28, 28);
+  background-color: black;
   color: white;
   padding: 20px;
-  font-size: 10px;
-  font-family: monospace;
   box-shadow: 0 0 0.5em black;
-  display: flex;
   justify-content: space-between;
 }
 
-.commands,
-.remove-auto-service>p {
-  font-size: 0.9rem;
-}
-
 .commands>div p:before {
-  content: '';
-  color: aqua;
+  content: '# ';
+  color: var(--main-color);
 }
 
 .copybutton {
   display: flex;
   height: 40px;
   width: 75px;
-  border: 1px solid mediumspringgreen;
+  border: 2px solid mediumspringgreen;
   border-radius: 5px;
   cursor: pointer;
   color: mediumspringgreen;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 .copybutton:active {
@@ -265,6 +242,23 @@ h5 {
   text-align: center;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 0.8rem;
   font-weight: bold;
+}
+
+.reset {
+  border: 2px solid #e34b4b;
+  color: #e34b4b;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 25px;
+  width: 65px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+}
+
+.reset:active {
+  background-color: #e34b4b;
+  color: white;
 }
