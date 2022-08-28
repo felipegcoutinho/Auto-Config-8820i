@@ -5,15 +5,15 @@ import Header from './header'
 import Poncontainer from './pon-container'
 
 
-// ReactDOM.createRoot(document.getElementById('header')).render(
-//   <React.StrictMode>
-//     <Header />
-//   </React.StrictMode>
-// ),
-
-ReactDOM.createRoot(document.getElementById('main')).render(
+ReactDOM.createRoot(document.getElementById('header')).render(
   <React.StrictMode>
-    <App />
+    <Header />
   </React.StrictMode>
-)
+),
+
+  ReactDOM.createRoot(document.getElementById('main')).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  )
 

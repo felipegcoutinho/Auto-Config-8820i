@@ -1,8 +1,8 @@
 /* STRUCTURE SETTINGS */
 
 :root {
-  --main-color: #00A335;
-  --secondary-color: #5E6573;
+  --main-color: #00a335;
+  --secondary-color: #5e6573;
 }
 
 * {
@@ -16,7 +16,13 @@
 
 body {
   background-color: whitesmoke;
-  font-family: inter, segoe ui;
+  font-family: segoe ui;
+  overflow: auto;
+  /* Hide scrollbars */
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -51,7 +57,7 @@ select:focus-visible {
 }
 
 span {
-  color: orange;
+  text-decoration: underline;
 }
 
 /* HEADER SETTINGS */
@@ -145,6 +151,7 @@ h5 {
 .cpe-container-uma-vlan {
   display: flex;
   font-size: 0.8rem;
+  margin-top: 10px;
 }
 
 .cpe-modes {
@@ -160,7 +167,6 @@ h5 {
 
 .cpe-container-uma-vlan>.cpe-modes {
   background: linear-gradient(to bottom, var(--main-color) 10%, #dfdfdf 0%);
-
 }
 
 .cpe-modes>select,
@@ -187,7 +193,7 @@ h5 {
 .config-auto-service {
   background-color: var(--secondary-color);
   padding: 10px;
-  width: calc(920px/2);
+  width: calc(920px / 2);
   border-radius: 5px 0 0 5px;
 }
 
@@ -203,7 +209,7 @@ h5 {
   background-color: var(--secondary-color);
   margin-left: 2px;
   padding: 10px;
-  width: calc(920px/2);
+  width: calc(920px / 2);
   border-radius: 0 5px 5px 0;
 }
 
@@ -230,25 +236,28 @@ h5 {
 }
 
 .copybutton {
-  height: 50px;
+  display: flex;
+  height: 40px;
   width: 75px;
-}
-
-.copybutton>button {
+  border: 1px solid mediumspringgreen;
+  border-radius: 5px;
   cursor: pointer;
-  height: 30px;
-  width: 40px;
-  background-color: transparent;
   color: mediumspringgreen;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .umavlan-container {
-  display: none;
-} */
+.copybutton:active {
+  background-color: mediumspringgreen;
+  color: black;
+}
 
+#umavlan-container {
+  display: none;
+}
 
 .button-container {
-  background-color: var(--secondary-color);
+  background-color: #292c33;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
@@ -257,4 +266,5 @@ h5 {
   cursor: pointer;
   text-transform: uppercase;
   font-size: 0.8rem;
+  font-weight: bold;
 }
