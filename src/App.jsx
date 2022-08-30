@@ -512,7 +512,7 @@ export default function App() {
         <div className="tabs-container">
           <a onClick={Hide}>
             <div className="config-auto-service">
-              Configurações do Auto-Service
+              Configurações do Auto-Service TESTE
             </div>
           </a>
           <a onClick={Show}>
