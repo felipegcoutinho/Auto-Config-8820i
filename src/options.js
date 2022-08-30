@@ -1,44 +1,43 @@
 const options = [
-
   {
-    label: "eth1",
-    value: "eth1",
+    label: 'eth 1',
+    value: 'eth 1',
   },
   {
-    label: "eth2",
-    value: "eth2",
+    label: 'eth 2',
+    value: 'eth 2',
   },
   {
-    label: "eth3",
-    value: "eth3",
+    label: 'eth 3',
+    value: 'eth 3',
   },
   {
-    label: "eth4",
-    value: "eth4",
+    label: 'eth 4',
+    value: 'eth 4',
   },
   {
-    label: "eth5",
-    value: "eth5",
+    label: 'eth 5',
+    value: 'eth 5',
   },
   {
-    label: "eth6",
-    value: "eth6",
+    label: 'eth 6',
+    value: 'eth 6',
   },
   {
-    label: "eth7",
-    value: "eth7",
+    label: 'eth 7',
+    value: 'eth 7',
   },
   {
-    label: "eth8",
-    value: "eth8",
+    label: 'eth 8',
+    value: 'eth 8',
   },
   {
-    label: "xeth1",
-    value: "xeth1",
+    label: 'xeth 1',
+    value: 'xeth 1',
   },
   {
-    label: "xeth2",
-    value: "xeth2",
+    label: 'xeth 2',
+    value: 'xeth 2',
   },
 ];
 
