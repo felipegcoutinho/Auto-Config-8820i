@@ -517,7 +517,7 @@ export default function App() {
           </a>
           <a onClick={Show}>
             <div className="remove-auto-service">
-              Remover Configuração Padrão A
+              Remover Configuração Padrão
             </div>
             
           </a>
