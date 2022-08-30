@@ -19,6 +19,7 @@ body {
   background-color: whitesmoke;
   font-family: 'Fira Sans', segoe ui, arial;
   overflow: auto;
+  font-smooth: always;
 }
 
 /* Hide scrollbars */
