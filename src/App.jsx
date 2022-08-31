@@ -587,7 +587,7 @@ export default function App() {
           <div className="commands">
             <div id="config2">
               <p>
-                bridge add {values.uplinkpon1}
+                bridge add {values.uplinkpon1}{' '}
                 {values.bridgepon1} vlan{' '}
                 {values.vlanpon1}{' '}
                 {values.modovlanpon1}
