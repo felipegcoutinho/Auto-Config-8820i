@@ -23,56 +23,56 @@ export default function App() {
     if (values.bridgepon1 == 'tls') {
       return 'tls';
     } else {
-      return 'Downlink';
+      return 'downlink';
     }
   }
   function bridgeAjustepon2() {
     if (values.bridgepon2 == 'tls') {
       return 'tls';
     } else {
-      return 'Downlink';
+      return 'downlink';
     }
   }
   function bridgeAjustepon3() {
     if (values.bridgepon3 == 'tls') {
       return 'tls';
     } else {
-      return 'Downlink';
+      return 'downlink';
     }
   }
   function bridgeAjustepon4() {
     if (values.bridgepon4 == 'tls') {
       return 'tls';
     } else {
-      return 'Downlink';
+      return 'downlink';
     }
   }
   function bridgeAjustepon5() {
     if (values.bridgepon5 == 'tls') {
       return 'tls';
     } else {
-      return 'Downlink';
+      return 'downlink';
     }
   }
   function bridgeAjustepon6() {
     if (values.bridgepon6 == 'tls') {
       return 'tls';
     } else {
-      return 'Downlink';
+      return 'downlink';
     }
   }
   function bridgeAjustepon7() {
     if (values.bridgepon7 == 'tls') {
       return 'tls';
     } else {
-      return 'Downlink';
+      return 'downlink';
     }
   }
   function bridgeAjustepon8() {
     if (values.bridgepon8 == 'tls') {
       return 'tls';
     } else {
-      return 'Downlink';
+      return 'downlink';
     }
   }
 
@@ -112,10 +112,10 @@ export default function App() {
     document.execCommand('copy');
     document.removeEventListener('copy', listener);
 
-    setButtonText('Copiado')
+    setButtonText('Copiado');
 
     setTimeout(() => {
-      setButtonText("Copiar");
+      setButtonText('Copiar');
     }, 2000);
     // const btn1 = document.getElementById('btn1');
     // if (btn1.innerText == 'Copiado') {
@@ -127,7 +127,6 @@ export default function App() {
     if (document.getElementById('porpon-container').style.display == 'none') {
       document.getElementById('porpon-container').style.display = 'block';
       document.getElementById('umavlan-container').style.display = 'none';
-
     } else {
       document.getElementById('porpon-container').style.display = 'none';
       document.getElementById('umavlan-container').style.display = 'block';
@@ -137,12 +136,21 @@ export default function App() {
   return (
     <section className="main-container">
       <div className="button-container" onClick={switchVisible}>
-        <i className="fa-solid fa-rotate"></i> Alterar modo de configuração da OLT
+        <i className="fa-solid fa-rotate"></i> Alterar modo de configuração da
+        OLT
       </div>
       {/* UMA VLAN POR PON */}
       <div id="porpon-container">
-        <h1 id="porpon">UMA VLAN POR PORTA PON <button className='reset' onClick={() => setValues((initialValues))}>Limpar</button></h1>
-        <h3>Define identificação de vlan, porta uplink, tipo da vlan e a bridge para cada porta pon.</h3>
+        <h1 id="porpon">
+          UMA VLAN POR PORTA PON{' '}
+          <button className="reset" onClick={() => setValues(initialValues)}>
+            Limpar
+          </button>
+        </h1>
+        <h3>
+          Define identificação de vlan, porta uplink, tipo da vlan e a bridge
+          para cada porta pon.
+        </h3>
         <div className="pon-container">
           {/*********** PON-1 /**********/}
 
@@ -519,7 +527,6 @@ export default function App() {
             <div className="remove-auto-service">
               Remover Configuração Padrão
             </div>
-            
           </a>
         </div>
 
@@ -565,7 +572,10 @@ export default function App() {
             </div>
             <div
               className="copybutton"
-              onClick={() => copyToClip(document.getElementById('config1').innerText)}>
+              onClick={() =>
+                copyToClip(document.getElementById('config1').innerText)
+              }
+            >
               {buttonText}
             </div>
           </div>
@@ -575,12 +585,14 @@ export default function App() {
               <p>
                 bridge add <span>{values.uplinkpon1}</span>{' '}
                 <span>{values.bridgepon1}</span> vlan{' '}
-                <span>{values.vlanpon1}</span> <span>{values.modovlanpon1}</span>
+                <span>{values.vlanpon1}</span>{' '}
+                <span>{values.modovlanpon1}</span>
               </p>
               <p>
                 bridge add <span>{values.uplinkpon2}</span>{' '}
                 <span>{values.bridgepon2}</span> vlan{' '}
-                <span>{values.vlanpon2}</span> <span>{values.modovlanpon2}</span>
+                <span>{values.vlanpon2}</span>{' '}
+                <span>{values.modovlanpon2}</span>
               </p>
               <p>
                 bridge add <span>{values.uplinkpon3}</span>{' '}
@@ -1081,7 +1093,10 @@ export default function App() {
             </div>
             <div
               className="copybutton"
-              onClick={() => copyToClip(document.getElementById('config2').innerText)}>
+              onClick={() =>
+                copyToClip(document.getElementById('config2').innerText)
+              }
+            >
               {buttonText}
             </div>
           </div>
@@ -1090,8 +1105,16 @@ export default function App() {
 
       {/* UMA VLAN */}
       <div id="umavlan-container">
-        <h1 id="umavlan">APENAS UMA VLAN <button className='reset' onClick={() => setValues((initialValues))}>Limpar</button></h1>
-        <h3>Define identificação da vlan, porta uplink, tipo da vlan e a bridge para todas as portas pons.</h3>
+        <h1 id="umavlan">
+          APENAS UMA VLAN{' '}
+          <button className="reset" onClick={() => setValues(initialValues)}>
+            Limpar
+          </button>
+        </h1>
+        <h3>
+          Define identificação da vlan, porta uplink, tipo da vlan e a bridge
+          para todas as portas pons.
+        </h3>
         <div className="cpe-container-uma-vlan">
           <div className="cpe-modes">
             <h5>TODAS AS PONS</h5>
@@ -1180,7 +1203,9 @@ export default function App() {
             </div>
           </a>
           <a onClick={Show}>
-            <div className="remove-auto-service">Remover Configuração Padrão</div>
+            <div className="remove-auto-service">
+              Remover Configuração Padrão
+            </div>
           </a>
         </div>
 
@@ -1199,7 +1224,9 @@ export default function App() {
             <div
               className="copybutton"
               onClick={() =>
-                copyToClip(document.getElementById('config3').innerText)}>
+                copyToClip(document.getElementById('config3').innerText)
+              }
+            >
               {buttonText}
             </div>
           </div>
@@ -1264,12 +1291,14 @@ export default function App() {
             <div
               className="copybutton"
               onClick={() =>
-                copyToClip(document.getElementById('config4').innerText)}>
+                copyToClip(document.getElementById('config4').innerText)
+              }
+            >
               {buttonText}
             </div>
           </div>
         )}
       </div>
-    </section >
+    </section>
   );
 }
