@@ -2,6 +2,7 @@ import * as React from 'react';
 import './style.css';
 import options from './options';
 import initialValues from './initialValues.js';
+import Warning from './warning';
 
 export default function App() {
   const [showElement, setShowElement] = React.useState(false);
@@ -530,6 +531,9 @@ export default function App() {
           </a>
         </div>
 
+        {/* Componente para aviso de auto-provisionamento */}
+        <Warning />
+
         {showElement ? (
           <div className="commands">
             <div id="config1">
@@ -583,143 +587,141 @@ export default function App() {
           <div className="commands">
             <div id="config2">
               <p>
-                bridge add <span>{values.uplinkpon1}</span>{' '}
-                <span>{values.bridgepon1}</span> vlan{' '}
-                <span>{values.vlanpon1}</span>{' '}
-                <span>{values.modovlanpon1}</span>
+                bridge add {values.uplinkpon1}
+                {values.bridgepon1} vlan{' '}
+                {values.vlanpon1}{' '}
+                {values.modovlanpon1}
               </p>
               <p>
-                bridge add <span>{values.uplinkpon2}</span>{' '}
-                <span>{values.bridgepon2}</span> vlan{' '}
-                <span>{values.vlanpon2}</span>{' '}
-                <span>{values.modovlanpon2}</span>
+                bridge add {values.uplinkpon2}{' '}
+                {values.bridgepon2} vlan{' '}
+                {values.vlanpon2}{' '}
+                {values.modovlanpon2}
               </p>
               <p>
-                bridge add <span>{values.uplinkpon3}</span>{' '}
-                <span>{values.bridgepon3}</span> vlan{' '}
-                <span>{values.vlanpon3}</span>{' '}
-                <span>{values.modovlanpon3}</span>
+                bridge add {values.uplinkpon3}{' '}
+                {values.bridgepon3} vlan{' '}
+                {values.vlanpon3}{' '}
+                {values.modovlanpon3}
               </p>
               <p>
-                bridge add <span>{values.uplinkpon4}</span>{' '}
-                <span>{values.bridgepon4}</span> vlan{' '}
-                <span>{values.vlanpon4}</span>{' '}
-                <span>{values.modovlanpon4}</span>
+                bridge add {values.uplinkpon4}{' '}
+                {values.bridgepon4} vlan{' '}
+                {values.vlanpon4}{' '}
+                {values.modovlanpon4}
               </p>
               <p>
-                bridge add <span>{values.uplinkpon5}</span>{' '}
-                <span>{values.bridgepon5}</span> vlan{' '}
-                <span>{values.vlanpon5}</span>{' '}
-                <span>{values.modovlanpon5}</span>
+                bridge add {values.uplinkpon5}{' '}
+                {values.bridgepon5} vlan{' '}
+                {values.vlanpon5}{' '}
+                {values.modovlanpon5}
               </p>
               <p>
-                bridge add <span>{values.uplinkpon6}</span>{' '}
-                <span>{values.bridgepon6}</span> vlan{' '}
-                <span>{values.vlanpon6}</span>{' '}
-                <span>{values.modovlanpon6}</span>
+                bridge add {values.uplinkpon6}{' '}
+                {values.bridgepon6} vlan{' '}
+                {values.vlanpon6}{' '}
+                {values.modovlanpon6}
               </p>
               <p>
-                bridge add <span>{values.uplinkpon7}</span>{' '}
-                <span>{values.bridgepon7}</span> vlan{' '}
-                <span>{values.vlanpon7}</span>{' '}
-                <span>{values.modovlanpon7}</span>
+                bridge add {values.uplinkpon7}{' '}
+                {values.bridgepon7} vlan{' '}
+                {values.vlanpon7}{' '}
+                {values.modovlanpon7}
               </p>
               <p>
-                bridge add <span>{values.uplinkpon8}</span>{' '}
-                <span>{values.bridgepon8}</span> vlan{' '}
-                <span>{values.vlanpon8}</span>{' '}
-                <span>{values.modovlanpon8}</span>
+                bridge add {values.uplinkpon8}{' '}
+                {values.bridgepon8} vlan{' '}
+                {values.vlanpon8}{' '}
+                {values.modovlanpon8}
               </p>
               <p>
                 bridge-profile add gpon1-default{' '}
-                <span>{bridgeAjustepon1()}</span> vlan{' '}
-                <span>{values.vlanpon1}</span> tagged eth 1
+                {bridgeAjustepon1()} vlan{' '}
+                {values.vlanpon1} tagged eth 1
               </p>
               <p>
                 bridge-profile add gpon2-default{' '}
-                <span>{bridgeAjustepon2()}</span> vlan{' '}
-                <span>{values.vlanpon2}</span> tagged eth 1
+                {bridgeAjustepon2()} vlan{' '}
+                {values.vlanpon2} tagged eth 1
               </p>
               <p>
                 bridge-profile add gpon3-default{' '}
-                <span>{bridgeAjustepon3()}</span> vlan{' '}
-                <span>{values.vlanpon3}</span> tagged eth 1
+                {bridgeAjustepon3()} vlan{' '}
+                {values.vlanpon3} tagged eth 1
               </p>
               <p>
                 bridge-profile add gpon4-default{' '}
-                <span>{bridgeAjustepon4()}</span> vlan{' '}
-                <span>{values.vlanpon4}</span> tagged eth 1
+                {bridgeAjustepon4()} vlan{' '}
+                {values.vlanpon4} tagged eth 1
               </p>
               <p>
                 bridge-profile add gpon5-default{' '}
-                <span>{bridgeAjustepon5()}</span> vlan{' '}
-                <span>{values.vlanpon5}</span> tagged eth 1
+                {bridgeAjustepon5()} vlan{' '}
+                {values.vlanpon5} tagged eth 1
               </p>
               <p>
                 bridge-profile add gpon6-default{' '}
-                <span>{bridgeAjustepon6()}</span> vlan{' '}
-                <span>{values.vlanpon6}</span> tagged eth 1
+                {bridgeAjustepon6()} vlan{' '}
+                {values.vlanpon6} tagged eth 1
               </p>
               <p>
                 bridge-profile add gpon7-default{' '}
-                <span>{bridgeAjustepon7()}</span> vlan{' '}
-                <span>{values.vlanpon7}</span> tagged eth 1
+                {bridgeAjustepon7()} vlan{' '}
+                {values.vlanpon7} tagged eth 1
               </p>
               <p>
                 bridge-profile add gpon8-default{' '}
-                <span>{bridgeAjustepon8()}</span> vlan{' '}
-                <span>{values.vlanpon8}</span> tagged eth 1
+                {bridgeAjustepon8()} vlan{' '}
+                {values.vlanpon8} tagged eth 1
               </p>
               <p>
                 bridge-profile add gpon1-default-router{' '}
-                <span>{bridgeAjustepon1()}</span> vlan 101 tagged router
+                {bridgeAjustepon1()} vlan 101 tagged router
               </p>
               <p>
                 bridge-profile add gpon2-default-router{' '}
-                <span>{bridgeAjustepon2()}</span> vlan 102 tagged router
+                {bridgeAjustepon2()} vlan 102 tagged router
               </p>
               <p>
                 bridge-profile add gpon3-default-router{' '}
-                <span>{bridgeAjustepon3()}</span> vlan 103 tagged router
+                {bridgeAjustepon3()} vlan 103 tagged router
               </p>
               <p>
                 bridge-profile add gpon4-default-router{' '}
-                <span>{bridgeAjustepon4()}</span> vlan 104 tagged router
+                {bridgeAjustepon4()} vlan 104 tagged router
               </p>
               <p>
                 bridge-profile add gpon5-default-router{' '}
-                <span>{bridgeAjustepon5()}</span> vlan 105 tagged router
+                {bridgeAjustepon5()} vlan 105 tagged router
               </p>
               <p>
                 bridge-profile add gpon6-default-router{' '}
-                <span>{bridgeAjustepon6()}</span> vlan 106 tagged router
+                {bridgeAjustepon6()} vlan 106 tagged router
               </p>
               <p>
                 bridge-profile add gpon7-default-router{' '}
-                <span>{bridgeAjustepon7()}</span> vlan 107 tagged router
+                {bridgeAjustepon7()} vlan 107 tagged router
               </p>
               <p>
                 bridge-profile add gpon8-default-router{' '}
-                <span>{bridgeAjustepon8()}</span> vlan 108 tagged router
+                {bridgeAjustepon8()} vlan 108 tagged router
               </p>
               <p>
-                bridge-profile bind add gpon1-<span>{gimode()}</span> device
-                intelbras-110 gpon 1
+                bridge-profile bind add gpon1-{gimode()} device intelbras-110 gpon 1
               </p>
               <p>
-                bridge-profile bind add gpon1-default device intelbras-110b gpon
-                1
+                bridge-profile bind add gpon1-default device intelbras-110b gpon 1
               </p>
               <p>
                 bridge-profile bind add gpon1-default device intelbras-110g gpon
                 1
               </p>
               <p>
-                bridge-profile bind add gpon1-<span>{defaultmode()}</span>{' '}
+                bridge-profile bind add gpon1-{defaultmode()}{' '}
                 device intelbras-default gpon 1
               </p>
               <p>
-                bridge-profile bind add gpon1-<span>{r1mode()}</span> device
+                bridge-profile bind add gpon1-{r1mode()} device
                 intelbras-r1 gpon 1
               </p>
               <p>
@@ -751,7 +753,7 @@ export default function App() {
                 intelbras-120ac gpon 1
               </p>
               <p>
-                bridge-profile bind add gpon2-<span>{gimode()}</span> device
+                bridge-profile bind add gpon2-{gimode()} device
                 intelbras-110 gpon 2
               </p>
               <p>
@@ -763,11 +765,10 @@ export default function App() {
                 2
               </p>
               <p>
-                bridge-profile bind add gpon2-<span>{defaultmode()}</span>{' '}
-                device intelbras-default gpon 2
+                bridge-profile bind add gpon2-{defaultmode()}{' '}device intelbras-default gpon 2
               </p>
               <p>
-                bridge-profile bind add gpon2-<span>{r1mode()}</span> device
+                bridge-profile bind add gpon2-{r1mode()} device
                 intelbras-r1 gpon 2
               </p>
               <p>
@@ -799,7 +800,7 @@ export default function App() {
                 intelbras-1200r gpon 2
               </p>
               <p>
-                bridge-profile bind add gpon3-<span>{gimode()}</span> device
+                bridge-profile bind add gpon3-{gimode()} device
                 intelbras-110 gpon 3
               </p>
               <p>
@@ -811,11 +812,11 @@ export default function App() {
                 3
               </p>
               <p>
-                bridge-profile bind add gpon3-<span>{defaultmode()}</span>{' '}
+                bridge-profile bind add gpon3-{defaultmode()}{' '}
                 device intelbras-default gpon 3
               </p>
               <p>
-                bridge-profile bind add gpon3-<span>{r1mode()}</span> device
+                bridge-profile bind add gpon3-{r1mode()} device
                 intelbras-r1 gpon 3
               </p>
               <p>
@@ -847,7 +848,7 @@ export default function App() {
                 intelbras-1200r gpon 3
               </p>
               <p>
-                bridge-profile bind add gpon4-<span>{gimode()}</span> device
+                bridge-profile bind add gpon4-{gimode()} device
                 intelbras-110 gpon 4
               </p>
               <p>
@@ -859,11 +860,11 @@ export default function App() {
                 4
               </p>
               <p>
-                bridge-profile bind add gpon4-<span>{defaultmode()}</span>{' '}
+                bridge-profile bind add gpon4-{defaultmode()}{' '}
                 device intelbras-default gpon 4
               </p>
               <p>
-                bridge-profile bind add gpon4-<span>{r1mode()}</span> device
+                bridge-profile bind add gpon4-{r1mode()} device
                 intelbras-r1 gpon 4
               </p>
               <p>
@@ -895,7 +896,7 @@ export default function App() {
                 intelbras-1200r gpon 4
               </p>
               <p>
-                bridge-profile bind add gpon5-<span>{gimode()}</span> device
+                bridge-profile bind add gpon5-{gimode()} device
                 intelbras-110 gpon 5
               </p>
               <p>
@@ -907,11 +908,11 @@ export default function App() {
                 5
               </p>
               <p>
-                bridge-profile bind add gpon5-<span>{defaultmode()}</span>{' '}
+                bridge-profile bind add gpon5-{defaultmode()}{' '}
                 device intelbras-default gpon 5
               </p>
               <p>
-                bridge-profile bind add gpon5-<span>{r1mode()}</span> device
+                bridge-profile bind add gpon5-{r1mode()} device
                 intelbras-r1 gpon 5
               </p>
               <p>
@@ -943,7 +944,7 @@ export default function App() {
                 intelbras-1200r gpon 5
               </p>
               <p>
-                bridge-profile bind add gpon6-<span>{gimode()}</span> device
+                bridge-profile bind add gpon6-{gimode()} device
                 intelbras-110 gpon 6
               </p>
               <p>
@@ -955,11 +956,11 @@ export default function App() {
                 6
               </p>
               <p>
-                bridge-profile bind add gpon6-<span>{defaultmode()}</span>{' '}
+                bridge-profile bind add gpon6-{defaultmode()}{' '}
                 device intelbras-default gpon 6
               </p>
               <p>
-                bridge-profile bind add gpon6-<span>{r1mode()}</span> device
+                bridge-profile bind add gpon6-{r1mode()} device
                 intelbras-r1 gpon 6
               </p>
               <p>
@@ -991,7 +992,7 @@ export default function App() {
                 intelbras-1200r gpon 6
               </p>
               <p>
-                bridge-profile bind add gpon7-<span>{gimode()}</span> device
+                bridge-profile bind add gpon7-{gimode()} device
                 intelbras-110 gpon 7
               </p>
               <p>
@@ -1003,11 +1004,11 @@ export default function App() {
                 7
               </p>
               <p>
-                bridge-profile bind add gpon7-<span>{defaultmode()}</span>{' '}
+                bridge-profile bind add gpon7-{defaultmode()}{' '}
                 device intelbras-default gpon 7
               </p>
               <p>
-                bridge-profile bind add gpon7-<span>{r1mode()}</span> device
+                bridge-profile bind add gpon7-{r1mode()} device
                 intelbras-r1 gpon 7
               </p>
               <p>
@@ -1039,7 +1040,7 @@ export default function App() {
                 intelbras-1200r gpon 7
               </p>
               <p>
-                bridge-profile bind add gpon8-<span>{gimode()}</span> device
+                bridge-profile bind add gpon8-{gimode()} device
                 intelbras-110 gpon 8
               </p>
               <p>
@@ -1051,11 +1052,11 @@ export default function App() {
                 8
               </p>
               <p>
-                bridge-profile bind add gpon8-<span>{defaultmode()}</span>{' '}
+                bridge-profile bind add gpon8-{defaultmode()}{' '}
                 device intelbras-default gpon 8
               </p>
               <p>
-                bridge-profile bind add gpon8-<span>{r1mode()}</span> device
+                bridge-profile bind add gpon8-{r1mode()} device
                 intelbras-r1 gpon 8
               </p>
               <p>
@@ -1209,6 +1210,9 @@ export default function App() {
           </a>
         </div>
 
+        {/* Componente para aviso de auto-provisionamento */}
+        <Warning />
+
         {showElement ? (
           <div className="commands">
             <div id="config3">
@@ -1234,32 +1238,32 @@ export default function App() {
           <div className="commands">
             <div id="config4">
               <p>
-                bridge add <span>{values.uplinkpon1}</span>{' '}
-                <span>{values.bridgepon1}</span> vlan{' '}
-                <span>{values.vlanpon1}</span>{' '}
-                <span>{values.modovlanpon1}</span>
+                bridge add {values.uplinkpon1}{' '}
+                {values.bridgepon1} vlan{' '}
+                {values.vlanpon1}{' '}
+                {values.modovlanpon1}
               </p>
               <p>
                 bridge-profile add default downlink vlan{' '}
-                <span>{values.vlanpon1}</span> tagged eth 1
+                {values.vlanpon1} tagged eth 1
               </p>
               <p>
                 bridge-profile add default-router{' '}
-                <span>{bridgeAjustepon1()}</span> vlan{' '}
-                <span>{values.vlanpon1}</span> tagged router
+                {bridgeAjustepon1()} vlan{' '}
+                {values.vlanpon1} tagged router
               </p>
               <p>
-                bridge-profile bind add <span>{gimode()}</span> device
+                bridge-profile bind add {gimode()} device
                 intelbras-110
               </p>
               <p>bridge-profile bind add default device intelbras-110b</p>
               <p>bridge-profile bind add default device intelbras-110g</p>
               <p>
-                bridge-profile bind add <span>{defaultmode()}</span> device
+                bridge-profile bind add {defaultmode()} device
                 intelbras-default
               </p>
               <p>
-                bridge-profile bind add <span>{r1mode()}</span> device
+                bridge-profile bind add {r1mode()} device
                 intelbras-r1
               </p>
               <p>
@@ -1299,6 +1303,6 @@ export default function App() {
           </div>
         )}
       </div>
-    </section>
+    </section >
   );
 }

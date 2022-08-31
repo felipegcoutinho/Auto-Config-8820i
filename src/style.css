@@ -262,3 +262,10 @@ h3 {
   background-color: #e34b4b;
   color: white;
 }
+
+.warning {
+  background-color: #fddda5;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
