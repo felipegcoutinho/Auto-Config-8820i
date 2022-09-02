@@ -18,6 +18,16 @@ export default function App() {
     });
   };
 
+  function teste1() {
+    const valores = document.querySelectorAll('input')
+
+    valores.forEach(function (item, array) {
+      if (item.value > 1000) {
+        alert('maior que 1000')
+      }
+    });
+  }
+
   const [buttonText, setButtonText] = React.useState('Copiar');
 
   function bridgeAjustepon1() {
@@ -162,6 +172,7 @@ export default function App() {
               type="number"
               value={values.vlanpon1}
               onChange={handleChange}
+              onBlur={teste1}
               name="vlanpon1"
             />
             <label>Uplink </label>
@@ -203,6 +214,7 @@ export default function App() {
               type="number"
               value={values.vlanpon2}
               onChange={handleChange}
+              onBlur={teste1}
               name="vlanpon2"
             />
             <label>Uplink </label>
@@ -244,6 +256,7 @@ export default function App() {
               type="number"
               value={values.vlanpon3}
               onChange={handleChange}
+              onBlur={teste1}
               name="vlanpon3"
             />
             <label>Uplink </label>
@@ -1120,12 +1133,12 @@ export default function App() {
           <div className="cpe-modes">
             <h5>TODAS AS PONS</h5>
             <label>Vlan ID</label>
-            <input
+            {/* <input
               type="number"
               value={values.vlanpon1}
               onChange={handleChange}
               name="vlanpon1"
-            />
+            /> */}
             <label>Uplink</label>
             <select
               value={values.uplinkpon1}
