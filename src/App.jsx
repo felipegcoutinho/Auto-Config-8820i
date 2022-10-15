@@ -689,35 +689,35 @@ export default function App() {
               </p>
               <p>
                 bridge-profile add gpon1-default-router{' '}
-                {bridgeAjustepon1()} vlan 101 tagged router
+                {bridgeAjustepon1()} vlan {values.vlanpon1} tagged router
               </p>
               <p>
                 bridge-profile add gpon2-default-router{' '}
-                {bridgeAjustepon2()} vlan 102 tagged router
+                {bridgeAjustepon2()} vlan {values.vlanpon2} tagged router
               </p>
               <p>
                 bridge-profile add gpon3-default-router{' '}
-                {bridgeAjustepon3()} vlan 103 tagged router
+                {bridgeAjustepon3()} vlan {values.vlanpon3} tagged router
               </p>
               <p>
                 bridge-profile add gpon4-default-router{' '}
-                {bridgeAjustepon4()} vlan 104 tagged router
+                {bridgeAjustepon4()} vlan {values.vlanpon4} tagged router
               </p>
               <p>
                 bridge-profile add gpon5-default-router{' '}
-                {bridgeAjustepon5()} vlan 105 tagged router
+                {bridgeAjustepon5()} vlan {values.vlanpon5} tagged router
               </p>
               <p>
                 bridge-profile add gpon6-default-router{' '}
-                {bridgeAjustepon6()} vlan 106 tagged router
+                {bridgeAjustepon6()} vlan {values.vlanpon6} tagged router
               </p>
               <p>
                 bridge-profile add gpon7-default-router{' '}
-                {bridgeAjustepon7()} vlan 107 tagged router
+                {bridgeAjustepon7()} vlan {values.vlanpon7} tagged router
               </p>
               <p>
                 bridge-profile add gpon8-default-router{' '}
-                {bridgeAjustepon8()} vlan 108 tagged router
+                {bridgeAjustepon8()} vlan {values.vlanpon8} tagged router
               </p>
               <p>
                 bridge-profile bind add gpon1-{gimode()} device intelbras-110 gpon 1
