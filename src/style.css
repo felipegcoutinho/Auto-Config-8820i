@@ -4,15 +4,19 @@
 :root {
   --main-color: #00a335;
   --secondary-color: #5e6573;
+  --cor-fundo: #00A335;
+  --cor-hover: #006a23;
+  --cor-fundo-hover: #003c14;
+  --cor-primaria: #e7f1ec;
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  vertical-align: baseline;
-  list-style: none;
   border: none;
   box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 
 body {
@@ -27,8 +31,8 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
 /* Remover setas do input */
@@ -40,13 +44,13 @@ input::-webkit-inner-spin-button {
 
 input,
 select {
-  border-radius: 3px;
-  width: 100%;
-  text-align: center;
-  padding: 4px 0;
   background-color: #e6e6e6;
-  margin-bottom: 5px;
+  border-radius: 3px;
   font-size: 0.9rem;
+  margin-bottom: 5px;
+  padding: 4px 0;
+  text-align: center;
+  width: 100%;
 }
 
 input:focus-visible,
@@ -59,8 +63,8 @@ span {
 }
 
 h5 {
-  margin-bottom: 10px;
   color: white;
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -68,56 +72,101 @@ h3 {
 }
 
 /* HEADER SETTINGS */
-
-.navbar {
-  width: 100%;
-  height: 50px;
-  background-color: var(--main-color);
+.container {
+  align-items: center; 
+  background-color: #00A335;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 60px;
+  justify-content: center;
 }
 
-.logo {
+.title {
+  font-weight: 900;
+}
+.version {
+  background-color: var(--cor-hover);
+  border-radius: 3px;
+  font-size: 0.6rem;
+  padding: 2px 5px;
+}
+
+.menu ul {
+  background-color: var(--cor-fundo);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu ul li {
+  display: inline;
+  position: relative;
+}
+
+.menu ul li a {
+  border-radius: 3px;
+  color: var(--cor-primaria);
   display: inline-block;
-  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  transition: background .3s;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding-left: 10px;
+.menu ul li a:hover {
+  background-color: var(--cor-hover);
+}
+
+/*sub menu*/
+.menu ul ul {
+  background-color: var(--cor-fundo-hover);
+  display: none;
+  left: 0;
+  margin-top: 1px;
+  position: absolute;
+}
+
+.menu ul li:hover ul {
+  display: block;
+}
+
+.menu ul ul {
+  width: 100px
+}
+
+.menu ul ul li a {
+  display: block;
 }
 
 /* MAIN SETTINGS */
 
 #main {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .main-container {
-  width: 920px;
   font-size: 0.9rem;
+  width: 960px;
 }
 
 .pon-container {
   display: flex;
+  justify-content: center;
   margin: 10px 0;
   text-transform: uppercase;
-  justify-content: center;
 }
 
 .pon-config {
+  align-items: center;
+  background: linear-gradient(to bottom, var(--main-color) 10%, #dfdfdf 0%);
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 3px;
   padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #d4d4d4;
-  background: linear-gradient(to bottom, var(--main-color) 10%, #dfdfdf 0%);
 }
 
 .pon-config>label {
@@ -135,15 +184,15 @@ h3 {
 }
 
 .cpe-modes {
+  align-items: center;
+  background: linear-gradient(to bottom, var(--main-color) 30%, #dfdfdf 0%);
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
   margin: 3px;
   padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #d4d4d4;
-  background: linear-gradient(to bottom, var(--main-color) 30%, #dfdfdf 0%);
+  width: 100%;
 }
 
 .cpe-container-uma-vlan>.cpe-modes {
@@ -156,25 +205,25 @@ h3 {
 }
 
 .cpe-modes>label {
-  text-transform: uppercase;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .tabs-container {
+  color: white;
+  cursor: pointer;
   display: flex;
   margin-top: 15px;
   text-align: center;
-  color: white;
-  cursor: pointer;
   text-transform: uppercase;
 }
 
 .config-auto-service {
   background-color: var(--secondary-color);
+  border: 1px solid #4d525d;
+  border-radius: 5px 0 0 5px;
   padding: 10px;
   width: calc(920px / 2);
-  border-radius: 5px 0 0 5px;
-  border: 1px solid #4d525d;
 }
 
 .config-auto-service:active {
@@ -184,11 +233,11 @@ h3 {
 
 .remove-auto-service {
   background-color: var(--secondary-color);
+  border: 1px solid #4d525d;
+  border-radius: 0 5px 5px 0;
   margin-left: 2px;
   padding: 10px;
   width: calc(920px / 2);
-  border-radius: 0 5px 5px 0;
-  border: 1px solid #4d525d;
 }
 
 .remove-auto-service:active {
@@ -197,31 +246,31 @@ h3 {
 }
 
 .commands {
-  display: flex;
-  margin: 20px 0;
   background-color: black;
-  color: white;
-  padding: 20px;
   box-shadow: 0 0 0.5em black;
+  color: white;
+  display: flex;
   justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px;
 }
 
 .commands>div p:before {
-  content: '# ';
   color: var(--main-color);
+  content: '# ';
 }
 
 .copybutton {
-  display: flex;
-  height: 40px;
-  width: 75px;
+  align-items: center;
   border: 2px solid mediumspringgreen;
   border-radius: 5px;
-  cursor: pointer;
   color: mediumspringgreen;
-  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
   justify-content: center;
   text-transform: uppercase;
+  width: 75px;
 }
 
 .copybutton:active {
@@ -235,27 +284,27 @@ h3 {
 
 .button-container {
   background-color: #292c33;
-  padding: 10px;
-  margin: 10px 0;
   border-radius: 5px;
   color: white;
-  text-align: center;
   cursor: pointer;
-  text-transform: uppercase;
   font-weight: bold;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .reset {
-  border: 2px solid #e34b4b;
-  color: #e34b4b;
   background-color: transparent;
+  border: 2px solid #e34b4b;
   border-radius: 5px;
+  color: #e34b4b;
   cursor: pointer;
-  height: 25px;
-  width: 65px;
-  font-weight: bold;
-  text-transform: uppercase;
   font-size: 0.65rem;
+  font-weight: bold;
+  height: 25px;
+  text-transform: uppercase;
+  width: 65px;
 }
 
 .reset:active {
@@ -265,7 +314,7 @@ h3 {
 
 .warning {
   background-color: #fddda5;
-  padding: 10px;
-  margin-top: 20px;
   border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
 }

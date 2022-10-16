@@ -18,16 +18,6 @@ export default function App() {
     });
   };
 
-  function teste1() {
-    const valores = document.querySelectorAll('input')
-
-    valores.forEach(function (item, array) {
-      if (item.value > 1000) {
-        alert('maior que 1000')
-      }
-    });
-  }
-
   const [buttonText, setButtonText] = React.useState('Copiar');
 
   function bridgeAjustepon1() {
@@ -128,10 +118,6 @@ export default function App() {
     setTimeout(() => {
       setButtonText('Copiar');
     }, 2000);
-    // const btn1 = document.getElementById('btn1');
-    // if (btn1.innerText == 'Copiado') {
-    // alert('teste');
-    // }
   }
 
   function switchVisible() {
@@ -172,7 +158,6 @@ export default function App() {
               type="number"
               value={values.vlanpon1}
               onChange={handleChange}
-              onBlur={teste1}
               name="vlanpon1"
             />
             <label>Uplink </label>
@@ -214,7 +199,6 @@ export default function App() {
               type="number"
               value={values.vlanpon2}
               onChange={handleChange}
-              onBlur={teste1}
               name="vlanpon2"
             />
             <label>Uplink </label>
@@ -256,7 +240,6 @@ export default function App() {
               type="number"
               value={values.vlanpon3}
               onChange={handleChange}
-              onBlur={teste1}
               name="vlanpon3"
             />
             <label>Uplink </label>
