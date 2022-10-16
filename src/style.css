@@ -283,15 +283,15 @@ h3 {
 }
 
 .button-container {
-  background-color: #292c33;
+  background-color: #5e6573;
   border-radius: 5px;
   color: white;
   cursor: pointer;
+  font-size: 1.2rem;
   font-weight: bold;
   margin: 10px 0;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .reset {
