@@ -1,0 +1,15 @@
+.container {
+  grid-area: 4 / 3 / 4 / 15;
+}
+
+.aviso {
+  background-color: #fddda5;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.aviso p {
+  font-size: 0.9rem;
+  margin: 0;
+}

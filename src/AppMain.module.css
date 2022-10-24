@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=JetBrains+Mono&display=swap');
+
+html {
+  scroll-behavior:smooth
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+body, select, input {
+  box-sizing: border-box;
+  font-family: 'Fira Sans',Segoe UI, Arial, sans-serif;
+  margin: 0;
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+input:focus-visible, select:focus-visible {
+  background-color: white;
+}
+
+select, input {
+  background-color: #e6e6e6;  
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+pre {
+  font-family: 'JetBrains Mono', monospace, arial;
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+pre::before {
+  color: #00A335;
+  content: '# ';
+}
+
+hr {
+  border: 1px solid whitesmoke;
+  width: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: 'Fira Sans',Segoe UI, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.container {
+    background-color: whitesmoke;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(5, 0.1fr);
+}
+
+.title {
+  grid-area: 2 / 3 / 2 / 15;
+}
+
+.select {
+  border: none;
+  font-family: 'Fira Sans',Segoe UI, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 30px;
+  margin: 10px 0 0 0;
+  text-align: center;
+  width: 150px;
+}
+
+.h1 {
+  margin: 40px 0 0 0;
+}
+
+.h2, .h3 {
+  margin: 0;
+}
+
+.h3 {
+  margin-top: 10px;
+}
+
+.content{
+  align-items: center;
+  background-color: #5E6573;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}

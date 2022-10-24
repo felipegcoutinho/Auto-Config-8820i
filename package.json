@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.4.2",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
