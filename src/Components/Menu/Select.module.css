@@ -10,8 +10,7 @@
 
 .containerBtn{
   display: flex;
-  justify-content: space-between;
-  width: 350px;
+  justify-content: center;
 }
 
 .btn {

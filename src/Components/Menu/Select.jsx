@@ -8,10 +8,9 @@ export default function Select() {
 
   return (
     <div className={Style.content}>
-      <h2 className={Style.h2}>Escolha o Concentrador que será configurado:</h2>
+      <h2 className={Style.h2}>Concentrador que será configurado:</h2>
       <nav className={Style.containerBtn}>
         <Link to="/"><button className={Style.btn}>OLT 8820i</button></Link>
-        <a target="_blank" rel="noopener noreferrer" href='https://g16.felipecoutinho.com'><button className={Style.btn}>OLT G08/G16 <i className="fa-solid fa-sm fa-arrow-up-right-from-square"></i></button></a>
       </nav>
 
 

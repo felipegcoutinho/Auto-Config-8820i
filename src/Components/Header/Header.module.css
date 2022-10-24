@@ -13,6 +13,7 @@
 .title {
   font-weight: 900;
 }
+
 .version {
   background-color: var(--cor-hover);
   border-radius: 3px;
@@ -45,6 +46,17 @@
 
 .menu ul li a:hover {
   background-color: var(--cor-hover);
+}
+
+.btnExternal {
+  background-color: var(--cor-fundo);
+  border: #aeffc8 solid 1px;
+  border-radius: 3px;
+  color: var(--cor-primaria);
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0px;
 }
 
 /*sub menu*/
