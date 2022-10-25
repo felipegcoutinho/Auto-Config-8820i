@@ -1,11 +1,10 @@
 .content{
-  align-items: center;
   background-color: #5E6573;
+  border: 1px solid #3d414a;
   border-radius: 3px;
   color: white;
-  display: flex;
-  flex-direction: column;
   padding: 30px;
+  text-align: center;
 }
 
 .containerBtn{
@@ -14,14 +13,17 @@
 }
 
 .btn {
+  background-color: #2a2f37;
   border-radius: 3px;
+  color: white;
   margin-top: 15px;
   width: 150px;
 }
 
-.btn:hover{
-  background-color: #3C3F4A;
-  color: white;
+.btn:before{
+  color: #24ac50;
+  content: '\f00c\ ';
+  font-family: FontAwesome;
 }
 
 .modoContainer {
@@ -35,6 +37,7 @@
   font-size: 1rem;
   font-weight: bold;
   height: 35px;
+  text-transform: uppercase;
   width: 250px;
 }
 

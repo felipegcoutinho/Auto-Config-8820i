@@ -49,8 +49,8 @@
 }
 
 .btnExternal {
-  background-color: var(--cor-fundo);
-  border: #aeffc8 solid 1px;
+  background-color: #1b873e;
+  border: #00bc5f solid 1px;
   border-radius: 3px;
   color: var(--cor-primaria);
   font-size: 0.8rem;
@@ -64,7 +64,7 @@
   background-color: var(--cor-fundo-hover);
   display: none;
   left: 0;
-  margin-top: 1px;
+  margin-top: 0px;
   position: absolute;
 }
 

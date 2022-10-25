@@ -23,6 +23,7 @@
 
 .pons {  
   background-color: #DFDFDF;
+  border: 1px solid #cecece;
   border-radius: 3px;
   box-sizing: border-box;
   display: flex;

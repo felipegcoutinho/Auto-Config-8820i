@@ -4,7 +4,9 @@
 
 .aviso {
   background-color: #fddda5;
+  border: 1px solid #ffca6e;
   border-radius: 5px;
+  color: #915b00;
   margin-top: 20px;
   padding: 10px;
 }

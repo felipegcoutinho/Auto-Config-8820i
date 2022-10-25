@@ -187,17 +187,17 @@ export default function ConfigAutoService() {
               copyToClip(document.getElementById('bindgpon4').innerText)
             }>
               <pre>bridge-profile bind add gpon4-{gimode()} device intelbras-110 gpon 4</pre>
-              <pre>bridge-profile bind add gpon4-default device intelbras-110b gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-default device intelbras-110g gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-{defaultmode()} device intelbras-default gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-{r1mode()} device intelbras-r1 gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-default-router device intelbras-121w gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-default-router device intelbras-142ng gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-default-router device intelbras-142nw gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-default-router device intelbras-1420g gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-default-router device intelbras-121ac gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-default-router device intelbras-1200r gpon 3</pre>
-              <pre>bridge-profile bind add gpon4-default-router device intelbras-120ac gpon 3</pre>
+              <pre>bridge-profile bind add gpon4-default device intelbras-110b gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-default device intelbras-110g gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-{defaultmode()} device intelbras-default gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-{r1mode()} device intelbras-r1 gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-default-router device intelbras-121w gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-default-router device intelbras-142ng gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-default-router device intelbras-142nw gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-default-router device intelbras-1420g gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-default-router device intelbras-121ac gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-default-router device intelbras-1200r gpon 4</pre>
+              <pre>bridge-profile bind add gpon4-default-router device intelbras-120ac gpon 4</pre>
             </code>
             <hr />
             <code id="bindgpon5" className={Style.code} onClick={() =>
@@ -206,66 +206,66 @@ export default function ConfigAutoService() {
               <pre>bridge-profile bind add gpon5-{gimode()} device intelbras-110 gpon 5</pre>
               <pre>bridge-profile bind add gpon5-default device intelbras-110b gpon 5</pre>
               <pre>bridge-profile bind add gpon5-default device intelbras-110g gpon 5</pre>
-              <pre>bridge-profile bind add gpon5-{defaultmode()} device intelbras-default gpon 3</pre>
-              <pre>bridge-profile bind add gpon5-{r1mode()} device intelbras-r1 gpon 3</pre>
-              <pre>bridge-profile bind add gpon5-default-router device intelbras-121w gpon 3</pre>
-              <pre>bridge-profile bind add gpon5-default-router device intelbras-142ng gpon 3</pre>
-              <pre>bridge-profile bind add gpon5-default-router device intelbras-142nw gpon 3</pre>
-              <pre>bridge-profile bind add gpon5-default-router device intelbras-1420g gpon 3</pre>
-              <pre>bridge-profile bind add gpon5-default-router device intelbras-121ac gpon 3</pre>
-              <pre>bridge-profile bind add gpon5-default-router device intelbras-1200r gpon 3</pre>
-              <pre>bridge-profile bind add gpon5-default-router device intelbras-120ac gpon 3</pre>
+              <pre>bridge-profile bind add gpon5-{defaultmode()} device intelbras-default gpon 5</pre>
+              <pre>bridge-profile bind add gpon5-{r1mode()} device intelbras-r1 gpon 5</pre>
+              <pre>bridge-profile bind add gpon5-default-router device intelbras-121w gpon 5</pre>
+              <pre>bridge-profile bind add gpon5-default-router device intelbras-142ng gpon 5</pre>
+              <pre>bridge-profile bind add gpon5-default-router device intelbras-142nw gpon 5</pre>
+              <pre>bridge-profile bind add gpon5-default-router device intelbras-1420g gpon 5</pre>
+              <pre>bridge-profile bind add gpon5-default-router device intelbras-121ac gpon 5</pre>
+              <pre>bridge-profile bind add gpon5-default-router device intelbras-1200r gpon 5</pre>
+              <pre>bridge-profile bind add gpon5-default-router device intelbras-120ac gpon 5</pre>
             </code>
             <hr />
             <code id="bindgpon6" className={Style.code} onClick={() =>
               copyToClip(document.getElementById('bindgpon6').innerText)
             }>
               <pre>bridge-profile bind add gpon6-{gimode()} device intelbras-110 gpon 6</pre>
-              <pre>bridge-profile bind add gpon6-default device intelbras-110b gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-default device intelbras-110g gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-{defaultmode()} device intelbras-default gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-{r1mode()} device intelbras-r1 gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-default-router device intelbras-121w gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-default-router device intelbras-142ng gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-default-router device intelbras-142nw gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-default-router device intelbras-1420g gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-default-router device intelbras-121ac gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-default-router device intelbras-1200r gpon 3</pre>
-              <pre>bridge-profile bind add gpon6-default-router device intelbras-120ac gpon 3</pre>
+              <pre>bridge-profile bind add gpon6-default device intelbras-110b gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-default device intelbras-110g gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-{defaultmode()} device intelbras-default gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-{r1mode()} device intelbras-r1 gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-default-router device intelbras-121w gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-default-router device intelbras-142ng gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-default-router device intelbras-142nw gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-default-router device intelbras-1420g gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-default-router device intelbras-121ac gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-default-router device intelbras-1200r gpon 6</pre>
+              <pre>bridge-profile bind add gpon6-default-router device intelbras-120ac gpon 6</pre>
             </code>
             <hr />
             <code id="bindgpon7" className={Style.code} onClick={() =>
               copyToClip(document.getElementById('bindgpon7').innerText)
             }>
               <pre>bridge-profile bind add gpon7-{gimode()} device intelbras-110 gpon 7</pre>
-              <pre>bridge-profile bind add gpon7-default device intelbras-110b gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-default device intelbras-110g gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-{defaultmode()} device intelbras-default gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-{r1mode()} device intelbras-r1 gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-default-router device intelbras-121w gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-default-router device intelbras-142ng gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-default-router device intelbras-142nw gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-default-router device intelbras-1420g gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-default-router device intelbras-121ac gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-default-router device intelbras-1200r gpon 3</pre>
-              <pre>bridge-profile bind add gpon7-default-router device intelbras-120ac gpon 3</pre>
+              <pre>bridge-profile bind add gpon7-default device intelbras-110b gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-default device intelbras-110g gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-{defaultmode()} device intelbras-default gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-{r1mode()} device intelbras-r1 gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-default-router device intelbras-121w gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-default-router device intelbras-142ng gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-default-router device intelbras-142nw gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-default-router device intelbras-1420g gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-default-router device intelbras-121ac gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-default-router device intelbras-1200r gpon 7</pre>
+              <pre>bridge-profile bind add gpon7-default-router device intelbras-120ac gpon 7</pre>
             </code>
             <hr />
             <code id="bindgpon8" className={Style.code} onClick={() =>
               copyToClip(document.getElementById('bindgpon8').innerText)
             }>
               <pre>bridge-profile bind add gpon8-{gimode()} device intelbras-110 gpon 8</pre>
-              <pre>bridge-profile bind add gpon8-default device intelbras-110b gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-default device intelbras-110g gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-{defaultmode()} device intelbras-default gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-{r1mode()} device intelbras-r1 gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-default-router device intelbras-121w gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-default-router device intelbras-142ng gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-default-router device intelbras-142nw gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-default-router device intelbras-1420g gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-default-router device intelbras-121ac gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-default-router device intelbras-1200r gpon 3</pre>
-              <pre>bridge-profile bind add gpon8-default-router device intelbras-120ac gpon 3</pre>
+              <pre>bridge-profile bind add gpon8-default device intelbras-110b gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-default device intelbras-110g gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-{defaultmode()} device intelbras-default gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-{r1mode()} device intelbras-r1 gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-default-router device intelbras-121w gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-default-router device intelbras-142ng gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-default-router device intelbras-142nw gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-default-router device intelbras-1420g gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-default-router device intelbras-121ac gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-default-router device intelbras-1200r gpon 8</pre>
+              <pre>bridge-profile bind add gpon8-default-router device intelbras-120ac gpon 8</pre>
             </code>
             <hr />
             <code id="onuset" className={Style.code} onClick={() =>

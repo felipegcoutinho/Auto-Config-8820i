@@ -18,7 +18,7 @@ export default function Select() {
         <h3 className={Style.h3}>Escolha o tipo de configuração da 8820i:</h3>
         <select className={Style.select} onChange={handleChangeSelected} >
           <option>Uma VLAN por PON</option>
-          <option>Apenas uma VLAN por PON</option>
+          <option>Apenas uma VLAN</option>
         </select>
       </div>
     </div>

@@ -29,7 +29,7 @@ export default function header() {
 
           <li>
             <button className={Style.btnExternal}>
-              <a target="_blank" rel="noopener noreferrer" href="https://8820i.felipecoutinho.com/"> OLT G08/G16{' '}
+              <a target="_blank" rel="noopener noreferrer" href="https://g16.felipecoutinho.com/"> OLT G08/G16{' '}
                 <i className="fa-solid fa-sm fa-arrow-up-right-from-square"></i>
               </a>
             </button>

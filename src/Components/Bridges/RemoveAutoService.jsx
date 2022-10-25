@@ -58,7 +58,7 @@ export default function RemoveAutoService() {
           : <code id="linerouter1" className={Style.code} onClick={() =>
             copyToClip(document.getElementById('linerouter1').innerText)
           }>
-            <pre>bridge - profile delete default</pre>
+            <pre>bridge-profile delete default</pre>
             <pre>yes</pre>
             <pre>bridge-profile delete default-router</pre>
             <pre>yes</pre>

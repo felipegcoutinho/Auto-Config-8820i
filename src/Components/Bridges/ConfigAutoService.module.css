@@ -1,6 +1,6 @@
 .container { 
-  grid-area: 5 / 3 / 10 / 10;
-  margin-right: 10px;
+  grid-area: 5 / 3 / 15 / 10;
+  margin-bottom: 30px;
 }
 
 .container h2, 
@@ -20,7 +20,6 @@
   display: flex;
   flex-direction: column;
   padding: 20px; 
-  
 }
 
 .container select {
@@ -33,7 +32,7 @@
 
 .code {
   cursor: pointer;
-  padding: 15px 10px;
+  padding: 15px 0;
 }
 
 .code:hover{
