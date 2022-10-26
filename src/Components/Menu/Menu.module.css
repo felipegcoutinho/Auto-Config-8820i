@@ -1,10 +1,20 @@
-.content{
+.container{
   background-color: #5E6573;
   border: 1px solid #3d414a;
   border-radius: 3px;
   color: white;
+  grid-area: 1 / 3 / 2 / 15;
+  margin-top: 10px;
   padding: 30px;
   text-align: center;
+}
+
+.h1 {
+  margin-top: 0;
+}
+
+.h2 {
+  margin: 0;
 }
 
 .containerBtn{
@@ -28,7 +38,7 @@
 
 .modoContainer {
   align-items: center;
-  display: flex;
+
   flex-direction: column;
 }
 
@@ -39,8 +49,4 @@
   height: 35px;
   text-transform: uppercase;
   width: 250px;
-}
-
-.h2 {
-  margin: 0;
 }

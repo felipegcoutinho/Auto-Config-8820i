@@ -1,20 +1,21 @@
 import React from 'react';
-import Style from './AppMain.module.css';
+import Style from './App.module.css';
 import ValueContext from "./js/ValueContext";
 import ConfigAutoService from '../src/Components/Bridges/ConfigAutoService';
 import RemoveAutoService from '../src/Components/Bridges/RemoveAutoService';
 import Pons_i from '../src/Components/Pons/Pons_i';
 import Aviso from '../src/Components/Aviso/Aviso';
-import Select from '../src/Components/Menu/Select';
+import Menu from '../src/Components/Menu/Menu';
 import initialValues from './js/initialValues.js';
+import Footer from '../src/Components/Footer/Footer';
 
 export default function App() {
 
   //Hook para armazenar o modelo do equipamento
-
   const [checked, setChecked] = React.useState(null)
 
   const [selected, setSelected] = React.useState(true);
+
   const handleChangeSelected = () => {
     setSelected(!selected)
   }
@@ -32,16 +33,12 @@ export default function App() {
   return (
     <ValueContext.Provider value={{ values, setValues, handleChange, checked, setChecked, selected, handleChangeSelected }}>
       <div className={Style.container}>
-        {/* Select para o equipamento */}
-        <div className={Style.title}>
-          <Select />
-
-          <h1 className={Style.h1}>8820i - Configurações de Auto Provisionamento</h1>
-        </div>
+        <Menu />
         <Pons_i />
         <Aviso />
         <ConfigAutoService />
         <RemoveAutoService />
+        <Footer />
       </div>
     </ValueContext.Provider>
   )

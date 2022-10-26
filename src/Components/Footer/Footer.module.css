@@ -1,0 +1,28 @@
+.container {
+  background-color: #24AC50;
+  display: flex;
+  grid-area: 15 / 3 / 15 / 15;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.content {
+  color: white;
+}
+  
+.github, .site {
+  border-radius: 3px;
+  padding: 10px;
+  text-transform: lowercase;
+}
+.site:before {
+  content: "\f2bd\ ";
+  font-family: fontawesome;
+  font-size: 1.2rem;
+}
+.github:before {
+  content: "\f09b\ ";
+  font-family: fontawesome;
+  font-size: 1.2rem;
+}
