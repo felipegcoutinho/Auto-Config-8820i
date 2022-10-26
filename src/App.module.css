@@ -74,10 +74,6 @@ button {
     grid-template-columns: repeat(16, 1fr);
 }
 
-.title {
-  grid-area: 2 / 3 / 2 / 15;
-}
-
 .select {
   border: none;
   font-family: 'Fira Sans',Segoe UI, Arial, sans-serif;
@@ -95,14 +91,4 @@ button {
 
 .h3 {
   margin-top: 10px;
-}
-
-.content{
-  align-items: center;
-  background-color: #5E6573;
-  border-radius: 3px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
 }
